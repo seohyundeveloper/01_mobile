@@ -228,6 +228,9 @@
   .mt10 {
     margin-top:1rem
   }
+  .mt16 {
+    margin-top: 1.66rem;
+  }
 }
 
 @layer component {
@@ -466,6 +469,47 @@
             left: 0;
             top: 50%;
             transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  @layer footer {
+    .footer {
+      height: 10.8rem;
+      background-color: var(--gray66);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .copyright {
+        font-family: Roboto;
+        font-size: 1.1rem;
+        & .copyright__name {
+          font-weight: 700;
+        }
+      }
+      & .copyright__info {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        letter-spacing: -0.05rem;
+        display: flex;
+        > b {
+          padding: 0 1.2rem 0 0.4rem;
+          + b {
+            position: relative;
+            padding: 0 1.2rem;
+            &::before {
+              content: '';
+              background-color: var(--white);
+              width: 0.1rem;
+              height: 1.4rem;
+              opacity: 0.2;
+              position: absolute;
+              left:0;
+            }
           }
         }
       }
