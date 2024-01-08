@@ -1,0 +1,36 @@
+.header.logo { }
+
+.header {
+  .logo {
+
+  }
+}
+
+.header {
+  & .logo {
+    
+  }
+}
+
+/* 태그를 직접 쓰는경우에는 & 써주고 사용한다. */
+
+.header {
+  .logo {
+    .link & {
+
+    }  
+  }
+}
+
+/* 
+class 뒤에 &가 있는 경우
+위의 요소들의 부모가 link가 된다.
+*/
+
+.header > .logo { }
+
+.header {
+  > .logo {
+
+  }
+}
