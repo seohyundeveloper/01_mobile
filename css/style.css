@@ -1,5 +1,5 @@
 @import url(./reset.css) layer(reset);
-@layer reset, layout, component, button, align, space;
+@layer reset, layout, component, button, badge, align, space;
 
 :root {
   --gold: #d8b98b;
@@ -12,6 +12,7 @@
   --grayc9: #c9c9c9;
   --gray4b: #4b4b4b;
   --gray21: #212121;
+  --grayaa: #AAA;
   --gray33: #333;
   --white: #ffffff;
   --white60: rgba(255, 255, 255, 0.6);
@@ -21,6 +22,10 @@
   --gray66: #666666;
   --grayf5: #f5f5f5;
   --red: #f93232;
+  --mint00: #00D4EA;
+  --orangeff:#FF6A13;
+  --green09:#09E27C;
+
 
   --shadow1: 8px 8px 16px 0px rgba(0, 0, 0, 0.15);
   --shadow2: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.1);
@@ -517,3 +522,46 @@
   }
 }
 
+@layer badge {
+  .badge {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    box-sizing: border-box;
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.05rem;
+    &.color__mint {
+      background: var(--mint00);
+    }
+    &.color__orange {
+      background: var(--orangeff, #FF6A13);
+    }
+    &.color__green09 {
+      background: var(--green09);
+    }
+    &.color__grayaa {
+      background: var(--grayaa);
+    }
+    &.color__white {
+      background: var(--white);
+      border: 1px solid var(--grayea);
+    }
+    &.ico1 {
+      color: var(--gray4b);
+      font-size: 1.2rem;
+      padding: 0.8rem 1rem;
+      &::before {
+        content:"";
+        width: 0.8rem;
+        height: 1.2rem;
+        background: url(../images/ico_mobile.svg) no-repeat 0 0 / contain;
+      }
+    }
+  }
+}
