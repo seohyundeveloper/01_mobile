@@ -103,7 +103,7 @@
       }
     }
   }
-  
+
   @layer footer {
     .footer {
       height: 10.8rem;
@@ -563,6 +563,66 @@
         height: 1.2rem;
         background: url(../images/ico_mobile.svg) no-repeat 0 0 / contain;
       }
+    }
+  }
+}
+
+@layer table {
+  .table__type1 {
+    font-size: 1.2rem;
+    > thead {
+      height: 4.2rem;
+      color: var(--gray21);
+      line-height: 1.2rem;
+      letter-spacing: -0.05rem;
+      border-top: 1px solid var(--blue);
+      border-bottom: 1px solid var(--gray99);
+      background-color: var(--grayfa);
+      > tr {
+        > th {
+          border-right: 1px solid var(--grayd7);
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+    > tbody {
+      height: 4.2rem;
+      color: var(--gray4b);
+      line-height: 1.2rem; /* 100% */
+      letter-spacing: -0.05rem;
+      text-align: center;
+    }
+  }
+}
+
+@layer input {
+  .input {
+    background-color: var(--white); 
+    width: 26.7rem;
+    height: 4rem;
+    padding: 1.2rem;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    color: var(--gray4b);
+    font-size: 1.4rem;
+    line-height: 100%;
+    letter-spacing: -0.05rem;
+    &.color_lightgray {
+      border: 1px solid var(--grayd7);
+    }
+    &.color_gray {
+      border: 1px solid var(--gray99);
+    }
+    &.color_red {
+      border: 1px solid var(--red);
+      &::placeholder {
+        color: var(--red);
+      }
+    }
+    &.no_line::placeholder {
+      color: var(--grayc9);  
     }
   }
 }
