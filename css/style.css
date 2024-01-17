@@ -709,5 +709,27 @@
       }
     }
   }
+  & select {
+    padding: 0 1.2rem;
+    width: 100%;
+    height: 4rem;
+    border: 0.1rem solid var(--grayd7);
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    background-color: var(--white);
+    color: var(--gray4b);
+    font-size: 1.4rem;
+    line-height: 100%; /* 1.4rem */
+    letter-spacing: -0.05rem;   
+    outline: 0;
+    background: url(../images/ico_arrow-down.svg) no-repeat right 2.15rem center;
+    &:focus {
+      border-color: var(--gray99);
+    }
+    &:disabled {
+      border-color: var(--grayea);
+      color: var(--grayc9);
+    }
+  }
 }
 
